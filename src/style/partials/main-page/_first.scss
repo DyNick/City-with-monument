@@ -1,0 +1,231 @@
+//section style
+.section-city-first{
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-attachment: fixed;
+  @include flex-mixin(center, center, column);
+  flex-wrap: wrap;
+  @include media-mixin($tablet-media){
+    height: 900px;
+    padding: 30px 0;
+    background-position-x: 37%;
+  }
+}
+.container--city-first{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-rows: minmax(250px, auto) ;
+  align-items: center;
+  justify-content: center;
+  @include media-mixin($tablet-media){
+    grid-template-columns: 1fr;
+  }
+}
+//right
+.container-part--first-section-right{
+  width: 500px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 0 40px;
+  box-sizing: border-box;
+  @include flex-mixin(center, center, column);
+  @include media-mixin($container-media){
+    width: 100%;
+  }
+  @include media-mixin($tablet-media){
+    padding: 0 20px;
+  }
+}
+
+.bar-container-title{
+  color: #fff;
+  font-family: "SourceSansPro";
+  font-size: 24px;
+  margin-bottom: 60px;
+  @include media-mixin($medium-media){
+    font-size: 18px;
+  }
+}
+
+//bar style
+
+.bar-container{
+  width: 100%;
+  &__body{
+    position: relative;
+  }
+}
+.progress {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid #fff;
+  height: 35px;
+  border-radius: 20px;
+  transition: .2s linear;
+  padding: 3px;
+  box-sizing: border-box;
+  //transition-property: width, background-color;
+
+}
+
+
+.progress-bar{
+  height: 25px;
+  width: 0;
+  background: linear-gradient(to right, rgba(82, 88, 174, 1) 0%, rgba(199, 135, 210, 1) 100%);
+  border-radius: 13px;
+  position: relative;
+  &__circle{
+  position: absolute;
+    right: 3px;
+    top: 3px;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  &__value{
+    position: absolute;
+    top: -70px;
+    right: -26px;
+    background-color: rgba(171, 171, 171, .6);
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-family: "Oswald";
+    &--full{
+      right: -9px;
+      top: -40px;
+    }
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -10px;
+      right: 31px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid  rgba(171, 171, 171, .6);
+    }
+  }
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 35px;
+  line-height: 35px;
+  color: #444;
+  color: rgba(0, 0, 0, .4);
+}
+
+.bar-price{
+  width: 100%;
+  color: #fff;
+  margin-bottom: 15px;
+  &__number{
+    font-family: "Oswald";
+    padding-right: 5px;
+    color: #c787d2;
+    font-size: 24px;
+  }
+  &__text{
+    color: #fff;
+    font-family: SourceSansPro;
+    font-size: 24px;
+    @include media-mixin($medium-media){
+      font-size: 18px;
+    }
+  }
+}
+
+.btn {
+  font-family: SourceSansPro;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  width: 230px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #c886d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: 0;
+  transition: all .35s ease;
+  backface-visibility: hidden;
+  &:hover{
+    transform: scale(1.08);
+  }
+}
+
+//left
+.container-part--first-section-left{
+  width: 480px;
+  @include media-mixin($container-media){
+    width: 100%;
+}
+
+}
+.title-main{
+  font-family: "Oswald";
+  font-size: 140px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 15px;
+  @include media-mixin($medium-media){
+    font-size: 115px;
+  }
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(82, 88, 174, 1) 0%, rgba(199, 135, 210, 1) 100%);
+    bottom: -10px;
+
+
+  }
+
+}
+.title-main-block{
+  @include flex-mixin(flex-start, flex-start, row);
+  margin-bottom: 15px;
+}
+.title-main-description{
+  color: #fff;
+  font-family: SourceSansPro;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include media-mixin($medium-media){
+    text-align: center;
+}
+
+}
+.main-description{
+  color: #fff;
+  font-family: SourceSansPro;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  @include media-mixin($medium-media){
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,77 @@
+.section-four{
+  background-color: #6068c9;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+.title-h2-white{
+  color: #fff;
+}
+.title-h2--four-section{
+  margin: 0;
+  padding: 40px 0 80px;
+}
+.container-four-section__line{
+  height: 1px;
+  width: 200px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.container-four{
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  @include media-mixin($desktop-media){
+    grid-template-columns: 300px 300px;
+  }
+  @include media-mixin($tablet-media){
+    grid-template-columns: 1fr ;
+  }
+}
+.container-four-section{
+  @include flex-mixin(center, center, column);
+  @include media-mixin($tablet-media){
+    margin-top: 40px;
+  }
+  &:first-child{
+    @include media-mixin($tablet-media){
+      margin-top: 0px;
+    }
+  }
+}
+.container-four-section__who{
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 10px;
+}
+.container-four-section__name{
+  font-family: "SourceSansPro";
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #fff;
+}
+.container-four-section__image{
+  position: relative;
+
+  &__frame{
+    position: absolute;
+    z-index: 0;
+    top: -25px;
+    left: -25px;
+    &--right{
+      left: inherit;
+      right: -25px;
+    }
+  }
+  &__person{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    object-fit: cover;
+    height: 250px;
+  }
+}

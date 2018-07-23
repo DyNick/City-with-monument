@@ -1,0 +1,39 @@
+-var nav = [{url: '#map', name: 'где будет памятник?'}, {url: '#monument', name: 'конкурс'},{url: '#crypto-angel', name: 'Крипто-ангел '},{url: '#backers', name: 'BACKERS kiev '},{url: '#services', name: 'услуги '} ,{url: '#virtual', name: 'заказать рекламу   '},{url: '#embassy ', name: 'посольства'}];
+mixin navItem(url, name)
+	li.nav-list__item
+		a.nav-list__item__link(href=url)= name
+
+mixin second()
+	section#map.section-second
+		div.header__content
+			div.container.container--second
+				a.header__logoBlock.logo(href='/')
+					.logo-container
+						.logo-container__sn
+							.logo-container__sn__satoshi SATOSHI
+							.logo-container__sn__nakamoto NAKAMOTO
+						.logo-container__foundation REPUBLIC
+
+				ul.nav-list
+					li.nav-list__item-close
+						img.close-button(src='img/close-icon.png')
+					each i in nav
+						+navItem(i.url, i.name, i.url )
+				block content
+
+				button.menu__Btn
+
+		h2.title-h2.title-h2--afterfix Где будет памятник?
+		div.container--second--after
+			div.container-part.container-part--map-text
+
+				div.container-part__map-decription
+					div.monument-place
+						img.monument-place__fraime.aos-animate(data-aos='fade-right', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')(src='img/fraim1.png')
+						img.monument-place__image.aos-animate(data-aos='fade-left', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')(src='img/second/monument-place.jpg')
+						div.monument-place__text.aos-animate(data-aos='fade-up', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')
+							p В случае, если будет получено разрешение на строительство памятника Сатоши Накамото, он будет установлен на месте памятника В. Ленину на бульваре Шевченко.
+							p Если петиция будет отклонена, - будет выбрана другая локация. В настоящее время наблюдается заинтересованность по установке памятника на территориях инновационных бизнес-центров Киева
+			div.container-part.container-part--map
+				div#googleMap.google-map.aos-animate( data-lat=" 51.502229", data-lng="-0.117389", data-aos='fade-right', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')
+

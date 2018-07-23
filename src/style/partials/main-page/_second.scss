@@ -1,0 +1,313 @@
+.section-second{
+  background-color: #eee;
+  position: relative;
+  @include media-mixin($medium-media){
+    padding-top: 0!important;
+  }
+}
+
+//logo
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container {
+  color: #424242;
+  font-family: "Montserrat", sans-serif;
+  border: 3px solid #424242;
+  padding: 5px 7px 2px 9px;
+}
+.logo-container__sn__satoshi {
+  font-size: 17.5px;
+  font-weight: bolder;
+  line-height: .77;
+  letter-spacing: 5.3px;
+}
+
+.logo-container__sn__nakamoto {
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  width: 115px;
+  line-height: .98;
+  border-bottom: 3px solid #424242;
+}
+.logo-container__foundation {
+  font-size: 13.5px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: 5.9px;
+  text-align: left;
+}
+
+//navigation
+.header__content{
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 #afafb6;
+  position: relative;
+  z-index: 10;
+}
+
+.header__content.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+}
+.container--second{
+  @include flex-mixin(flex-start, center, row);
+  @include media-mixin($desktop-min-media){
+    justify-content: space-between;
+  }
+  height: 80px;
+&--after{
+  margin: 0px auto 50px;
+}
+}
+.nav-list__item__link.active{
+  color: #c787d2;
+}
+.nav-list{
+  @include flex-mixin(flex-end, center, row);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  color: #333;
+  width: 100%;
+  @include media-mixin($desktop-min-media){
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 20%;
+    bottom: 0;
+    z-index: 20;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: .3s;
+    @include flex-mixin(center, center, column);
+    /*display: none;*/
+  }
+  &__item{
+    margin-left: 10px;
+    @include media-mixin($tablet-media){
+      margin: 20px 0;
+    }
+    &__link{
+      color: #333;
+      &:hover{
+        color: #c787d2;
+      }
+    }
+  }
+}
+.container-part__map-decription{
+  @include media-mixin($desktop-media){
+    @include flex-mixin(center, center, column);
+  }
+  @include media-mixin($tablet-media){
+    width: calc(100% - 20px);
+    padding: 0 10px;
+  }
+}
+//
+.title-h2{
+  text-align: center;
+  font-family: "Oswald";
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: #3949ab;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  @include media-mixin($tablet-media){
+    margin-top: 50px;
+  }
+  &--afterfix{
+    margin-top: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+  }
+}
+.container-part--map{
+  display: block;
+  position: relative;
+  z-index: 1;
+  @include media-mixin($tablet-media){
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/transparent-gradient.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    @include media-mixin($tablet-media){
+      display: none;
+    }
+  }
+}
+.google-map{
+  filter: grayscale(100%);
+  width: 100%;
+  height: 600px;
+  @include media-mixin($desktop-media){
+    height: 400px;
+  }
+  @include media-mixin($tablet-media){
+    height: 300px;
+  }
+  @include media-mixin($medium-media){
+    height: 200px;
+  }
+}
+.container--second--after{
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+  justify-content: center;
+  @include media-mixin($desktop-media){
+    grid-template-columns: 1fr;
+  }
+}
+
+.container-part--map-text{
+  @include flex-mixin(flex-end, center, row);
+  position: relative;
+  z-index: 2;
+  @include media-mixin($desktop-media){
+    @include flex-mixin(flex-start, center, column);
+    //overflow-x: hidden;
+  }
+}
+
+.monument-place{
+  position: relative;
+  @include media-mixin($desktop-media){
+    width: 480px;
+    margin: 120px 0 100px;
+    box-sizing: border-box;
+  }
+  @include media-mixin($tablet-media){
+    width: 100%;
+    @include flex-mixin( space-around, flex-start, row);
+    margin: 100px 0 80px;
+  }
+  @include media-mixin($medium-media){
+    @include flex-mixin( center, center, column);
+    margin: 210px 0 125px;
+  }
+
+  &__image{
+    width: 275px;
+    height: 375px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    @include media-mixin($medium-media){
+      height: 180px;
+      width: auto;
+      position: absolute;
+      top: -115px;
+      left: 10px;
+    }
+  }
+  &__fraime{
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    right: -85px;
+    @include media-mixin($desktop-media){
+      right: inherit;
+      left: 20px;
+    }
+    @include media-mixin($medium-media){
+      width: 280px;
+    }
+  }
+  &__text{
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    right: -385px;
+    background: #fff;
+    height: auto;
+    width: 420px;
+    box-sizing: border-box;
+    padding: 40px;
+    padding-left: 60px;
+    font-family: "SourceSansPro";
+    font-weight: normal;
+    color: #5c5c5c;
+    font-size: 18px;
+    @include media-mixin($desktop-media){
+      right: inherit;
+      left: 240px;
+      height: 375px;
+      padding: 20px;
+    }
+    @include media-mixin($tablet-media){
+      position: relative;
+      left: inherit;
+      width: auto;
+      margin-left: 20px;
+      margin-top: -31px;
+    }
+    @include media-mixin($medium-media){
+      height: auto;
+      width: 70%;
+    }
+    p:last-child{
+      margin-top: 15px;
+    }
+  }
+}
+
+.menu__Btn {
+  background-image: url(http://satoshirepublic.org//img/menuBtn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+  display: none;
+  @include media-mixin($desktop-min-media){
+    display: block;
+  }
+}
+.nav-list.active{
+  display: flex;
+  transform: translateX(0);
+  transition: .3s;
+}
+.close-button{
+  height: 25px;
+  width: 25px;
+
+}
+.nav-list__item-close{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: none;
+  @include media-mixin($desktop-min-media){
+    display: block;
+  }
+}

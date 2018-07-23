@@ -1,0 +1,73 @@
+
+
+
+//Width variables
+
+$container-width: 1200px;
+$laptop-width: 1280px;
+$desktop-width: 1024px;
+$desktop-min-width: 998px;
+$tablet-width: 768px;
+$mobile-big-width: 480px;
+$mobile-small-width: 320px;
+
+
+$small-media: "(max-width: #{$mobile-small-width})" ;
+$medium-media: " (max-width: #{$mobile-big-width})" ;
+$tablet-media: " (max-width: #{$tablet-width})" ;
+$desktop-min-media: " (max-width: #{$desktop-min-width})" ;
+$desktop-media: " (max-width: #{$desktop-width})" ;
+$container-media: "(max-width: #{$container-width})" ;
+
+
+
+//Mixins
+
+@mixin media-mixin ($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+@mixin flex-mixin($justify, $align, $flow){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+}
+
+
+@mixin button-mixin($bg-color, $color, $paddings) {
+  padding: $paddings;
+  background-color: $bg-color;
+  border: 0;
+  outline: none;
+  font-weight: 600;
+  color: $color;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+
+//default style
+.container{
+  width: $container-width;
+  margin: 0 auto;
+  @include media-mixin($container-media){
+    width: 1024px;
+    max-width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+}
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,41 @@
+mixin popup ()
+	a#popup-link.popup-link(href='#', data-click='callback')
+		.circlephone(style='transform-origin: center;')
+		.circle-fill(style='transform-origin: center;')
+		.img-circle(style='transform-origin: center;')
+			.img-circleblock(style='transform-origin: center;')
+
+	//.ambassador-button-conteiner
+		.ambassador-button__borders
+		.ambassador-button__main
+			a#popup-link(href='#!')
+				| become
+				br
+				| an
+				br
+				|  ambassador
+
+
+	.popup-ambassador
+		.modal-inner
+			span.btn-close
+			// <h3>BE THE FIRST</h3>
+			p
+				| ICO campaign did not start yet. If you want to be the first to get information about the launch, please, fill in your contacts and get notifications about special offers of .token sale.
+				br
+				|  BE THE FIRST!
+			span#CloseBtn.ambassadorPopup__closeBtn.participatePopupCloseBtn
+				img(src='http://satoshirepublic.org/img/closeBtn.svg')
+			.form
+				form(data-metrica-pagename='Обратный звонок', action='', method='post')
+					label
+						.error-msg(style='display: none;') Введите имя
+						input.form-control(required='', name='name', placeholder='NAME*', type='text')
+					label
+						div(style='font-weight:normal;font-family: SourceSansPro;font-size: 14px;line-height:1.2;') Please, fill in your  mobile number in the next format:+ХХХХХХХХХХХХ
+						input.form-control(required='', name='phone', placeholder='PHONE*', type='tel', pattern='^[\+]?\d{8,12}$', id='')
+					label
+						div(style='font-weight:normal;font-family: SourceSansPro;font-size: 14px;line-height:1.2;') Please, fill in your email in the next format:some@some.com
+						input.form-control(required='', name='email', placeholder='EMAIL*', type='email', pattern="[a-zA-Z0-9_]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?!([a-zA-Z0-9]*\.[a-zA-Z0-9]*\.[a-zA-Z0-9]*\.))(?:[A-Za-z0-9](?:[a-zA-Z0-9-]*[A-Za-z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?")
+
+					button.btn.btn--form(type='submit', name='ask') BE THE FIRST

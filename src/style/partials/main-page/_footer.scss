@@ -1,0 +1,73 @@
+
+.footer {
+  background-color: #5d6685;
+  padding: 35px 0;
+}
+
+.footer__logoBlock {
+  margin-right: 35px
+}
+
+.footer__socBlock {
+  display: flex;
+  align-items: center
+}
+
+.footer__socText {
+  font-family: SourceSansPro;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 15px
+}
+
+.container--footer{
+  @include flex-mixin(center, center, row);
+}
+
+.footer__socLink {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  margin-right: 8px
+}
+
+.footer__socLink:last-child {
+  margin-right: 0;
+}
+
+.footer__socLink_facebook:before {
+  content: url('http://satoshirepublic.org/img/socials/facebook-dark.svg');
+}
+
+.header__logoBlock{
+  margin-right: 10px;
+}
+
+.footer__socLink:before {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.logo-container--white .logo-container__sn__satoshi {
+  color: #fff;
+}
+
+.logo-container--white .logo-container__sn__nakamoto {
+  border-color: #fff;
+  color: #fff;
+}
+
+.logo-container--white {
+  border: 3px solid #fff;
+}
+
+.logo-container--white .logo-container__foundation {
+  color: #fff;
+}

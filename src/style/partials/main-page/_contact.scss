@@ -1,0 +1,299 @@
+.section-contact{
+/*  background-image: url("../img/vertual/vertual-bg-outer1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  margin-top: 80px;*/
+background-color: #ebf0f9;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+.container--vertual{
+  margin: 60px auto;
+}
+.title-h2--contact-section{
+  margin-top: 30px;
+}
+.virtual-box{
+  width: 1023px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.virtyal-block{
+  width: 1023px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.loupe-widget {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+  width: 1023px;
+  height: 520px;
+}
+.image{
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+}
+.loupe-widget__loupe {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  /*    width: 499px;*/
+  width: 389px;
+  height: 178px;
+  transform: translate(-50%, -50%);
+  /*border-radius: 50%;*/
+  background-repeat: no-repeat;
+  border: 2px solid #222;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+  background-color: transparent;
+  background-image: url("../img/vertual/galaxy-note8_camera-night_hand.png") ;
+  display: block;
+}
+
+.loupe-widget__loupe:before {
+  content: "";
+  position: absolute;
+  z-index: 101;
+  top: 159%;
+  left: 38%;
+  width: 1130px;
+  height: 775px;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-image: url("../img/vertual/phone_hand.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+img.loupe-widget__image.js-loupe-image {
+  width: 1023px;
+}
+
+.virtual-box {
+  cursor: none;
+}
+
+.loupe-widget:hover .loupe-widget__loupe {
+  display: block;
+  pointer-events: none;
+}
+
+
+.virtual-icon1 {
+  position: absolute;
+  left: 380px;
+  top: 260px;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .5s;
+}
+
+
+.virtual-icon2 {
+  position: absolute;
+  left: 665px;
+  top: 44px;
+  height: 60px;
+  width: 40px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation: MoveUpDown .5s linear infinite;
+  /*animation-duration: .8s;*/
+}
+.virtual-icon3 {
+  position: absolute;
+  left: 332px;
+  top: 111px;
+  height: 51px;
+  width: 140px;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .8s;
+}
+.virtual-icon4 {
+  position: absolute;
+  /*left: 863px;
+  top: 68px;
+  height: 132px;
+  width: 157px;*/
+  left: 374px;
+  top: 174px;
+  height: 70px;
+  width: 100px;
+  z-index: 2;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .5s;
+}
+.virtual-icon5 {
+  position: absolute;
+  left: 805px;
+  top: 210px;
+  height: 40px;
+  width: 40px;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .5s;
+}
+
+.virtual-icon6 {
+  position: absolute;
+  left: 498px;
+  top: 224px;
+  height: 40px;
+  width: 40px;
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .5s;
+}
+.virtual-icon7 {
+  position: absolute;
+  left: 612px;
+  top: 180px;
+  height: 40px;
+  width: 40px;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .8s;
+}
+.virtual-icon8 {
+  position: absolute;
+  left: 652px;
+  top: 107px;
+  height: 50px;
+  width: 104px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .9s;
+}
+.virtual-icon9 {
+  position: absolute;
+  left: 760px;
+  top: 122px;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .7s;
+}
+.virtual-icon10 {
+  position: absolute;
+  left: 422px;
+  top: 275px;
+  height: 40px;
+  width: 79px;
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .9s;
+}
+.virtual-icon11 {
+  position: absolute;
+  left: 294px;
+  top: 150px;
+  height: 60px;
+  width: 40px;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation: MoveUpDown1 .5s linear infinite;
+}
+.virtual-icon12 {
+  position: absolute;
+  left: 275px;
+  top: 188px;
+  height: 47px;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: .8s;
+}
+/*
+.loupe-widget:hover .icon1 {
+
+    display: block;
+}*/
+
+
+@keyframes inOut {
+  0%{
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 40px;
+  }
+  50% {
+    top: 45px;
+  }
+}
+@keyframes MoveUpDown1 {
+  0%, 100% {
+    top: 120px;
+  }
+  50% {
+    top: 125px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .virtual-box{
+    display: block;
+    width: 100%;
+  }
+  .virtyal-block {
+    width: 100%;
+    height: 500px;
+  }
+  .loupe-widget {
+    width: 100%;
+  }
+}

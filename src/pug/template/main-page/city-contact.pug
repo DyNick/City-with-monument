@@ -1,0 +1,42 @@
+mixin city-contact ()
+	section#embassy.section-city-contact(style='background-image:url(img/section-intro/intro-bg.jpg)')
+		div.container
+			h2.title-h2.title-h2-white.title-h2--city-contact Адреса и клнтакты посольсва в
+				br
+				|посольсва в
+				span(style='padding-left: 5px;') KYIV
+
+		div.container.container--city-contact
+			div.block-city-contact.aos-init.aos-animate(data-aos='fade-down', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')
+				div.block-city-contact__inner
+					div.block-city-contact-item
+						h4.block-city-contact__inner__title Наш адрес
+						p.block-city-contact__inner__description Киев, Кияновский переулок 7а
+					div.block-city-contact-item
+						h4.block-city-contact__inner__title Позвоните нам
+						p.block-city-contact__inner__description +38 (044) 360 16 96
+					div.block-city-contact-item
+						h4.block-city-contact__inner__title Напишите нам
+						p.block-city-contact__inner__description
+							a(href='mailto:businessfaces.ev@gmail.com') businessfaces.ev@gmail.com
+			div.block-form-city-contact.aos-init.aos-animate(data-aos='fade-up', data-aos-easing='ease-in-sine', data-aos-duration='500', data-aos-offset='150')
+				form.form-city-contact(method='post')
+					div.form-city-contact__container
+						div.form-city-contact__container-item
+							label(for='city_contact_name') Name:
+							input#city_contact_name.form-control(type='text', size='40', value='NAME', name='city_contact_name')
+
+						div.form-city-contact__container-item
+							label(for='city_contact_name') Email:
+							input#city_contact_email.form-control(type='text', size='40', value='EMAIL', name='city_contact_email')
+
+						//div.form-city-contact__container-item
+							label(for='city_contact_name') SUBJECT:
+							input#city_contact_name.form-control(type='text', size='40', value='SUBJECT', name='city_contact_name')
+
+						div.form-city-contact__container-item
+							label(for='city_contact_massage') Massage:
+							textarea#city_contact_message.form-control.form-control--texteria(rows='5', cols='30', name='city_contact_message')
+
+						button.btn.btn--city-form(type='submit', name='ask') SUBMIT
+
